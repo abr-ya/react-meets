@@ -20,7 +20,7 @@
     "rules": {
         // note you must disable the base rule as it can report incorrect errors
         "no-use-before-define": "off", // подключение Реакта
-        "import/no-unresolved": "off", // импорт компонентов
+        "import/no-unresolved": 1, // импорт компонентов
         "react/jsx-filename-extension": [1, { "extensions": [".jsx"] }],
         "import/extensions": [1, { // импорт без расширений
             ".jsx": "never"

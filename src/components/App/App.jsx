@@ -1,50 +1,24 @@
-import React, { useState } from 'react';
-import './app.scss';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 
-const App = () => {
-  const [count, setCount] = useState(0);
+import AllMeetupsPage from '../../pages/AllMeetups';
+import NewMeetupPage from '../../pages/NewMeetup';
+import FavoritesPage from '../../pages/Favorites';
 
-  return (
-    <div className="App">
-      <h1 className="app-header">Hello from Vite + React!</h1>
-      <p>
-        <button type="button" onClick={() => setCount((prevCount) => prevCount + 1)}>
-          Add 1 to counter
-        </button>
-      </p>
-      <p>
-        Counter value is:
-        {' '}
-        {count}
-      </p>
-      <p>
-        Edit
-        {' '}
-        <code>App.jsx</code>
-        {' '}
-        and save to test HMR updates.
-      </p>
-      <p>
-        <a
-          className="app-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {' | '}
-        <a
-          className="app-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
-        </a>
-      </p>
-    </div>
-  );
-};
+const App = () => (
+  <div>
+    <Switch>
+      <Route path="/" exact>
+        <AllMeetupsPage />
+      </Route>
+      <Route path="/new-meetup">
+        <NewMeetupPage />
+      </Route>
+      <Route path="/favorites">
+        <FavoritesPage />
+      </Route>
+    </Switch>
+  </div>
+);
 
 export default App;
