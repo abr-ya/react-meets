@@ -1,5 +1,7 @@
 # about
-Стартовая сборка React + ESLint (Airbnb) + Prettier + Jest + React Testing Library на основе Vite.
+Проект, основные цели которого:
+- проверить сборку React + ESLint (Airbnb) + Prettier + Jest + React Testing Library на основе Vite,
+- посмотреть, насколько интересную и актуальную информацию даёт в своём свежем видео на Ютуб Макс.)
 
 ## install
 ```
