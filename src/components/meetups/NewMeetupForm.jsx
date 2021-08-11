@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
+import PropTypes from 'prop-types';
 import Card from '../ui/Card';
 import classes from './NewMeetupForm.module.scss';
 
-const NewMeetupForm = () => {
+const NewMeetupForm = ({ submitData }) => {
   const titleInputRef = useRef();
   const imageInputRef = useRef();
   const addressInputRef = useRef();
@@ -23,7 +24,7 @@ const NewMeetupForm = () => {
       description: enteredDescription,
     };
 
-    console.log(meetupData);
+    submitData(meetupData);
   };
 
   return (
@@ -61,6 +62,10 @@ const NewMeetupForm = () => {
       </form>
     </Card>
   );
+};
+
+NewMeetupForm.propTypes = {
+  submitData: PropTypes.func.isRequired,
 };
 
 export default NewMeetupForm;
