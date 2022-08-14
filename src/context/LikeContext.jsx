@@ -24,7 +24,7 @@ export const LikeProvider = ({ children }) => {
 
   const context = {
     likes,
-    count: likes.iength,
+    count: likes.length,
     addLike,
     unLike,
     hasLike,
